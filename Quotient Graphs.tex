@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{amsart}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{graphicx, epstopdf}
+
+\title{Quotient Graphs}
+\date{}
+
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{Remark}[Theorem]{Remark}
+\newtheorem{Observation}[Theorem]{Observation}
+
+\theoremstyle{definition}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{Example}[Theorem]{Example}
+
+\newcommand{\adj}[1]{\sim_{\scriptscriptstyle #1}}
+\newcommand{\nadj}[1]{\nsim_{\scriptscriptstyle #1}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\orb}{Orb}
+\DeclareMathOperator{\stab}{Stab}
+\DeclareMathOperator{\vset}{V}
+\DeclareMathOperator{\eset}{E}
+\DeclareMathOperator{\dist}{d}
+\newcommand{\Mod}[1]{\mathrm{\ (mod\ #1)}}
+
+\begin{document}
+\maketitle
+\begin{Lemma}
+\label{lem:xy=>x'y'}
+If $X$ and $Y$ are two orbits of the automorphism group of a graph $\Gamma$, and a vertex $x \in X$ is adjacent to a vertex $y \in Y$, then every vertex $x'$ of $X$ is adjacent to some vertex of $Y$.
+\end{Lemma}
+
+\begin{proof}
+Let $x' \in X$. Since $X = \orb(x)$ is the orbit of $x$ under the automorphism group of $\Gamma$, there is some automorphism $\phi$ of $\Gamma$ such that $\phi(x) = x'$. Then, $\phi(y) = y'$, $\exists y' \in Y = \orb(y)$. Since $x \adj{} y$, it follows that $x' \adj{} y'$, as required.
+\end{proof}
+
+\begin{Theorem}
+content...
+\end{Theorem}
+
+\end{document}

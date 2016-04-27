@@ -57,11 +57,15 @@ If $X$ and $Y$ are two orbits of the automorphism group of a graph $\Gamma$, and
 \end{Lemma}
 
 \begin{proof}
-Let $x' \in X$. Since $X = \orb(x)$ is the orbit of $x$ under the automorphism group of $\Gamma$, there is some automorphism $\phi$ of $\Gamma$ such that $\phi(x) = x'$. Then, $\phi(y) = y'$, $\exists y' \in Y = \orb(y)$. Since $x \adj{} y$, it follows that $x' \adj{} y'$, as required.
+Let $x' \in X$. Since $X = \orb(x)$ is the orbit of $x$ under the automorphism group of $\Gamma$, there is some automorphism $\varphi$ of $\Gamma$ such that $\varphi(x) = x'$. Then, $\varphi(y) = y'$, $\exists y' \in Y = \orb(y)$. Since $x \adj{} y$, it follows that $x' \adj{} y'$, as required.
 \end{proof}
 
 \begin{Theorem}
-Every cycle in the quotient graph $\Gamma/G$ corresponds to a cycle in the graph $\Gamma$.
+\label{thm:CycCorr}
+Every cycle in the quotient graph $\Gamma' = \Gamma/G$ of a graph $G$ corresponds to a cycle in the graph $\Gamma$.
 \end{Theorem}
+\begin{proof}
+Let $X_1, X_2, \ldots, X_k$ be a cycle of length $k$ in the quotient graph $\Gamma'$. Then, $X_1 \adj{\Gamma'} X_2$ implies that there exist vertices $x_1 \in X_1$ and $x_2 \in X_2$ of $\Gamma$, with $x_1 \adj{\Gamma} x_2$. Again, $X_2 \adj{\Gamma'} X_3$ implies that $x'_2 \adj{\Gamma} x'_3$, for some vertices $x'_2 \in X_2$ and $x'_3 \in X_3$. But then by Lemma~\ref{lem:xy=>x'y'}, $x_2$ itself is adjacent to some vertex $x_3 \in X_3$, in $\Gamma$. Similarly, we may find a sequences of vertices $x_4, x_5, \ldots, x_k$, such that $x_1, x_2, \ldots, x_k$ is a path in $\Gamma$. Now, since $X_k \adj{\Gamma'} X_1$, we must have $x_k \adj{\Gamma} y_1$, for some vertex $y_1 \in X_1$. If $y_1 = x_1$, we obtain a cycle as required. If not, we proceed as before to find a vertex $y_2 \in X_2$, with $y_1 \adj{\Gamma} y_2$, and so on, thus obtain a longer path in $\Gamma$ consisting of vertices of the orbits $X_1, \ldots, X_k$. As there are finitely many vertices, this procedure terminates at a repeated vertex, and we obtain a cycle in $\Gamma$.
+\end{proof}
 
 \end{document}

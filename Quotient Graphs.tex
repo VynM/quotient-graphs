@@ -75,4 +75,12 @@ If $X_1, X_2, \ldots, X_k$ is a cycle in the quotient graph $\Gamma' = \Gamma/G$
 Let $X_1, X_2, \ldots, X_k$ be a cycle of length $k$ in the quotient graph $\Gamma'$. Then by Lemma~\ref{lem:PathCorr}, there is a path $x_1, x_2, \ldots, x_k$ in $\Gamma$, with $x_i \in X_i$, $i = 1, 2, \ldots, k$. Now, since $X_k \adj{\Gamma'} X_1$, Lemma~\ref{lem:xy=>x'y'} implies that $x_k \adj{\Gamma} y_1$, for some vertex $y_1 \in X_1$. If $y_1 = x_1$, we obtain a cycle as required. If not, we proceed as before to find a path $y_1, y_2, \ldots, y_k$ with $y_i \in X_i$, $i = 1, 2, \ldots, k$. As there are finitely many vertices, this procedure terminates at a repeated vertex, and we obtain a cycle of the required form in $\Gamma$.
 \end{proof}
 
+\begin{Theorem}
+\label{thm:TreeQuot}
+The quotient graph of a tree is a tree.
+\end{Theorem}
+\begin{proof}
+The quotient graph of a connected graph is clearly connected. By Theorem~\ref{thm:CycCorr}, every cycle in a quotient graph corresponds to some cycle in the original graph. Therefore, the quotient graph of an acyclic graph is also acyclic. The result follows.
+\end{proof}
+
 \end{document}
